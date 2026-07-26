@@ -1,79 +1,88 @@
-fun main(){
+class Car(
+    val type: String,
+    val model: Int,
+    val owner: String,
+    var milesDriven: Int,
+    val originalPrice: Double,
+    var currentPrice: Double
+) {
 
-    println("Creating Car Class Object car1 in next line")
+    init {
+        println("Object of class is created and Init is called.")
+        println("-".repeat(50))
+    }
 
-    val c1=Car("BMW",2018,100000.0,"Het",105)
-    c1.displayCarInformation()
-
-    println()
-
-    println("Creating Car Class Object car2 in next line")
-
-    val c2=Car("BMW",2019,400000.0,"Rudra",20)
-    c2.displayCarInformation()
-
-    println()
-
-    println("****** ArrayList of Car ************")
-
-    val a1=arrayListOf<Car>()
-
-    val c3=Car("Toyota",2017,1080000.0,"Dev",100)
-    a1.add(c3)
-
-    val c4=Car("Maruti",2020,4000000.0,"Het",200)
-    a1.add(c4)
-
-    for(i in a1)
-    {
-        i.displayCarInformation()
+    fun displayCarInfo() {
+        println("\nCar Information: $type, $model")
+        println("Car Owner: $owner")
+        println("Miles Drive: $milesDriven")
+        println("Original Car Price: $originalPrice")
+        println("Current Car Price: $currentPrice")
+        println("-".repeat(50))
     }
 }
 
+fun main() {
+    println("Creating Car Class Object car1 in next time")
+    println("Object of class is created and Init is called.")
+    println()
+    println("Creating Car Class Object car1 in next time")
+    val car1 = Car(
+        type = "BMW",
+        model = 2018,
+        owner = "Aman",
+        milesDriven = 105,
+        originalPrice = 100000.0,
+        currentPrice = 98950.0
+    )
+    car1.displayCarInfo()
 
-open class Car(var type:String){
+    println()
+    println("Creating Car Class Object car2 in next time")
+    val car2 = Car(
+        type = "BMW",
+        model = 2019,
+        owner = "Karan",
+        milesDriven = 20,
+        originalPrice = 400000.0,
+        currentPrice = 399800.0
+    )
+    car2.displayCarInfo()
 
-    var model:Int=0
-    var price:Double=0.0
-    var owner:String=""
-    var miles:Int=0
+    println()
+    println("****** ArrayList of Car **********")
+    val carList = arrayListOf<Car>()
 
-    init
-    {
-        println("Object of class is created and Init is called.")
-        println("----------")
-    }
+    val car3 = Car(
+        type = "Toyota",
+        model = 2017,
+        owner = "KJS",
+        milesDriven = 100,
+        originalPrice = 1080000.0,
+        currentPrice = 1079000.0
+    )
+    carList.add(car3)
+    car3.displayCarInfo()
 
-    constructor(t:String,m:Int,p:Double,o:String,mi:Int):this(t)
-    {
-        model=m
-        price=p
-        owner=o
-        miles=mi
-    }
+    val car4 = Car(
+        type = "Maruti",
+        model = 2020,
+        owner = "NRP",
+        milesDriven = 200,
+        originalPrice = 4000000.0,
+        currentPrice = 3998000.0
+    )
+    carList.add(car4)
+    car4.displayCarInfo()
 
-    fun getCarInformation():String
-    {
-        return type+", "+model
-    }
-
-    fun getOriginalCarPrice():Double
-    {
-        return price
-    }
-
-    fun getCurrentCarPrice():Double
-    {
-        return price-(miles*10)
-    }
-
-    fun displayCarInformation()
-    {
-        println("Car Information: "+getCarInformation())
-        println("Car Owner: "+owner)
-        println("Miles Drive: "+miles)
-        println("Original Car Price: "+getOriginalCarPrice())
-        println("Current Car Price: "+getCurrentCarPrice())
-        println("----------")
+    println()
+    println("All Cars in ArrayList:")
+    println()
+    for (car in carList) {
+        println("Car Type: ${car.type}, Model: ${car.model}")
+        println("Owner: ${car.owner}")
+        println("Original Price: ${car.originalPrice}")
+        println("Current Price: ${car.currentPrice}")
+        println("-".repeat(50))
     }
 }

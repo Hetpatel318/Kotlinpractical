@@ -1,30 +1,28 @@
 fun main(){
-    var s1:String?="23"
-    var i:Int=s1!!.toInt()
-    println("i="+i)
-    val s2=readln().toInt()
-    println("s2="+s2)
+    println("Enter Enrollment Number:")
+    val eno = readln()
+    println("Enter Name:")
+    val name = readln()
+    println("Enter Branch:")
+    val branch = readln()
+    println("Enter Class:")
+    val clas = readln()
+    println("Enter Batch:")
+    val batch = readln()
+    println("Enter College Name:")
+    val clg = readln()
+    println("Enter University Name:")
+    val uni = readln()
+    println("Enter Age:")
+    val age = readln().toInt()
 
-
-    var studentroll=readln().toLong()
-    println("studentroll="+studentroll)
-    var studentname=readln().toLong()
-    println("studentname="+studentname)
-    var studentbranch=readln().toLong()
-    println("studentbranch="+studentbranch)
-    var studentclass=readln().toLong()
-    println("studentclass="+studentclass)
-    var studentBatch=readln().toLong()
-    println("studentBatch="+studentBatch)
-    var studentCollegename=readln().toLong()
-    println("studentCollegename="+studentCollegename)
-
-
-
-
-
-
-
-
-
+    println("Student's Data:")
+    println("Enrollment No.:$eno")
+    println("Name: $name")
+    println("Age: $age")
+    println("Branch: $branch")
+    println("Class: $clas")
+    println("Batch: $batch")
+    println("College Name: $clg")
+    println("University Name: $uni")
 }

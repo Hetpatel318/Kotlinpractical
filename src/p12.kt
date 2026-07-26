@@ -1,18 +1,15 @@
 fun main(){
-    val i=10000
-    val j:Double=i.toDouble()
-    val k="10"
-    val l:Int=k.toInt()
-    val m:Int=k.toInt()
-    val o="10.2"
-    val n:Double=o.toDouble()
-
-    println("i="+i)
-    println("j="+j)
-    println("k="+k)
-    println("l="+l)
-    println("m="+m)
-    println("o="+o)
-    println("n="+n)
-
+    val i = 10000
+    val j: Double = i.toDouble()
+    println("Integer Value: $i")
+    println("Double Value (From Integer):$j")
+    val s: String = "123"
+    val s1: Int = s.toInt()
+    val s2: Double = s.toDouble()
+    println("String Value: $s")
+    println("Integer Value (From String):$s1")
+    val t: String = "11.15"
+    val s3: Double = t.toDouble()
+    println("String Value:$t")
+    println("Double Value (From String):$s3")
 }
