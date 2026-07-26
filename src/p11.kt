@@ -1,14 +1,23 @@
 fun main(){
-    val i=10000
-    val j : Double=i.toDouble()
-    println("Integer value= $i")
-    println("Double value(From Integer)= $j")
-    val k:String="14"
-    println("String value= $k")
-    val l:Int=k.toInt()
-    println("Int value(From String)= $l")
-    val m:String="14.01"
-    println("String value= $m")
-    val a:Double=m.toDouble()
-    println("Double value(From String)= $a")
+    val j: Int = 22
+    val f: Float = 22.5f
+    val c: Char = 'T'
+    val s: String = "Het"
+    val b: Boolean = true
+    val d: Double = 3.14
+    val l: Long = 24012011207
+    val sh: Short = -2
+    val by: Byte = 127
+
+    println("Integer Value: $j")
+    println("Float Value: $f")
+    println("Character Value: $c")
+    println("String Value: $s")
+    println("Boolean Value: $b")
+    println("Double Value: $d")
+    println("Long Value: $l")
+    println("Short Value: $sh")
+    println("Byte Value: $by")
+
+    println("Sum of all:${j+f}")
 }
